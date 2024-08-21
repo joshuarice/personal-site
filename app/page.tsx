@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 
 const Home = () => {
 	return (
-		<main>
+		<main className="p-24">
 			<Hero />
 		</main>
 	);
