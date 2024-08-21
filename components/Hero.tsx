@@ -7,13 +7,14 @@ import { fadeIn, slideInFromLeft } from "@/utils/motion";
 import SkillBubble from "./SkillBubble";
 
 const Hero = () => {
+	const multiplier = 0.3;
 	return (
 		<>
 			<div className="flex justify-between mb-4 pr-36 z-10">
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(0.3)}>
+					variants={slideInFromLeft(multiplier)}>
 					<h1 className="text-4xl font-bold text-white">
 						Joshua Rice
 					</h1>
@@ -21,7 +22,7 @@ const Hero = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={fadeIn(0.6)}>
+					variants={fadeIn(multiplier * 2)}>
 					<p className="text-white text-4xl font-bold ">
 						<MapPinIcon className="text-[#72f071] h-9 w-9 inline-block mr-2 relative -top-0.5" />
 						Colorado, USA
@@ -34,8 +35,8 @@ const Hero = () => {
 			<motion.div
 				initial="hidden"
 				animate="visible"
-				variants={slideInFromLeft(0.6)}>
-				<p className="text-[10rem] leading-none font-bold text-white uppercase bg-gradient-to-r from-white via-[#72f071] to-[#72f071] text-transparent bg-clip-text -ml-2">
+				variants={slideInFromLeft(multiplier * 2)}>
+				<p className="inline-block text-[10rem] leading-none font-bold  uppercase bg-gradient-to-r from-white to-[#72f071] text-transparent bg-clip-text -ml-2">
 					Designer+
 					<br />
 					Developer
@@ -45,19 +46,25 @@ const Hero = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(1.2)}>
+					variants={slideInFromLeft(multiplier * 3)}>
+					<SkillBubble name="Next.js" />
+				</motion.div>
+				<motion.div
+					initial="hidden"
+					animate="visible"
+					variants={slideInFromLeft(multiplier * 3.75)}>
 					<SkillBubble name="Web Development" />
 				</motion.div>
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(1.6)}>
+					variants={slideInFromLeft(multiplier * 4.5)}>
 					<SkillBubble name="Web Applications" />
 				</motion.div>
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(2)}>
+					variants={slideInFromLeft(multiplier * 5.25)}>
 					<SkillBubble name="UI/UX Design" />
 				</motion.div>
 			</div>
@@ -65,7 +72,7 @@ const Hero = () => {
 			<motion.div
 				initial="hidden"
 				animate="visible"
-				variants={slideInFromLeft(0.9)}>
+				variants={slideInFromLeft(multiplier * 3)}>
 				<Link
 					href="/work"
 					className="text-[#72f071] font-bold uppercase text-4xl inline-block">
