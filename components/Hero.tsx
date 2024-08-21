@@ -9,11 +9,11 @@ import SkillBubble from "./SkillBubble";
 const Hero = () => {
 	return (
 		<>
-			<div className="flex justify-between mb-4 pr-36">
+			<div className="flex justify-between mb-4 pr-36 z-10">
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(0)}>
+					variants={slideInFromLeft(0.3)}>
 					<h1 className="text-4xl font-bold text-white">
 						Joshua Rice
 					</h1>
@@ -21,23 +21,20 @@ const Hero = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={fadeIn(0.5)}>
+					variants={fadeIn(0.6)}>
 					<p className="text-white text-4xl font-bold ">
 						<MapPinIcon className="text-[#72f071] h-9 w-9 inline-block mr-2 relative -top-0.5" />
 						Colorado, USA
 					</p>
 				</motion.div>
 			</div>
-			<motion.div
-				initial="hidden"
-				animate="visible"
-				variants={fadeIn(0.5)}>
+			<motion.div initial="hidden" animate="visible" variants={fadeIn(1)}>
 				<div className="border-b-4 border-[#72f071] w-48 mb-16"></div>
 			</motion.div>
 			<motion.div
 				initial="hidden"
 				animate="visible"
-				variants={slideInFromLeft(0.5)}>
+				variants={slideInFromLeft(0.6)}>
 				<p className="text-[10rem] leading-none font-bold text-white uppercase bg-gradient-to-r from-white via-[#72f071] to-[#72f071] text-transparent bg-clip-text -ml-2">
 					Designer+
 					<br />
@@ -48,19 +45,19 @@ const Hero = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(1.5)}>
+					variants={slideInFromLeft(1.2)}>
 					<SkillBubble name="Web Development" />
 				</motion.div>
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(2)}>
+					variants={slideInFromLeft(1.6)}>
 					<SkillBubble name="Web Applications" />
 				</motion.div>
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={slideInFromLeft(2.5)}>
+					variants={slideInFromLeft(2)}>
 					<SkillBubble name="UI/UX Design" />
 				</motion.div>
 			</div>
@@ -68,7 +65,7 @@ const Hero = () => {
 			<motion.div
 				initial="hidden"
 				animate="visible"
-				variants={slideInFromLeft(1)}>
+				variants={slideInFromLeft(0.9)}>
 				<Link
 					href="/work"
 					className="text-[#72f071] font-bold uppercase text-4xl inline-block">

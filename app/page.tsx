@@ -10,6 +10,7 @@ const Home = () => {
 				width={96}
 				height={1080}
 				className="absolute bottom-0 right-24 h-full w-auto"
+				priority
 			/>
 			<Hero />
 		</main>
