@@ -11,17 +11,12 @@ export const metadata: Metadata = {
 	description: "",
 };
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en" className={font.className}>
 			<body className="site-bg min-h-[533px]">
 				<Frame />
 				{children}
-				<Social />
 			</body>
 		</html>
 	);
